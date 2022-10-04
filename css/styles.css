@@ -12,6 +12,28 @@
   --dark-background: #2f303a;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-text);
@@ -38,6 +60,12 @@ button {
 /* header */
 .header {
   background-color: var(--white-background);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 .logo-header {
   font-family: 'Raleway';
@@ -52,8 +80,13 @@ button {
 .logo-web {
   color: var(--accent-color);
 }
+.navigation {
+  margin-left: 93px;
+}
 .nav-list {
   list-style-type: none;
+
+  display: flex;
 }
 .nav-list .link {
   font-weight: 500;
@@ -64,8 +97,19 @@ button {
   text-decoration: none;
   color: var(--main-text);
 }
+
+.nav-list-item:nth-child(-n + 2) {
+  margin-right: 50px;
+}
+
 .contacts {
   list-style-type: none;
+
+  display: flex;
+  margin-left: auto;
+}
+.contacts-list:first-child {
+  margin-right: 50px;
 }
 .contacts .link {
   font-weight: 500;
@@ -88,6 +132,8 @@ button {
 /* footer */
 .footer {
   background-color: var(--dark-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-footer {
   font-family: 'Raleway';
@@ -98,9 +144,15 @@ button {
 
   text-decoration: none;
   color: var(--white-text);
+
+  display: block;
+  margin-bottom: 20px;
 }
 .address-list {
   list-style-type: none;
+}
+.address-list .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address-list .link {
   font-style: normal;
@@ -119,10 +171,26 @@ button {
   color: var(--accent-color);
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* ---------------studio (main page)--------------- */
 /* hero */
 .hero {
   background-color: var(--dark-background);
+
+  padding-left: auto;
+  padding-right: auto;
 }
 .hero .title {
   font-weight: 900;
@@ -133,6 +201,9 @@ button {
   text-transform: uppercase;
 
   color: var(--white-text);
+
+  width: 696px;
+  margin-bottom: 30px;
 }
 .hero-btn {
   font-weight: 700;
@@ -142,6 +213,14 @@ button {
 
   color: var(--white-text);
   background-color: var(--accent-color);
+
+  display: block;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero button:hover,
@@ -151,6 +230,18 @@ button {
 
 /* benefits */
 .benefits {
+  padding-bottom: 0;
+}
+.benefits-list {
+  list-style-type: none;
+
+  display: flex;
+}
+.benefits-list .item {
+  width: 270px;
+}
+.benefits-list .item:nth-child(-n + 3) {
+  margin-right: 30px;
 }
 .benefits .title {
   font-weight: 700;
@@ -160,10 +251,10 @@ button {
   text-transform: uppercase;
 
   color: var(--main-text);
+
+  margin-bottom: 10px;
 }
-.benefits-list {
-  list-style-type: none;
-}
+
 .benefits-text {
   font-size: 14px;
   line-height: 1.71;
@@ -180,9 +271,14 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--main-text);
+  margin-bottom: 50px;
 }
 .work-list {
   list-style-type: none;
+  display: flex;
+}
+.work-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* command */
@@ -197,12 +293,25 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--main-text);
+  margin-bottom: 50px;
 }
 .command-list {
   list-style-type: none;
+
+  display: flex;
 }
 .command-list .item {
   background-color: var(--white-background);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.command-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.command-list .photo {
+  margin-bottom: 30px;
 }
 .command-list .title {
   font-weight: 500;
@@ -212,17 +321,22 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--main-text);
+  margin-bottom: 10px;
 }
 .command-list .text {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
 
 /* ---------------portfolio page--------------- */
 .filter-list {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 .filter-btn {
   font-weight: 500;
@@ -232,15 +346,40 @@ button {
 
   color: var(--main-text);
   background-color: var(--grey-background);
+
+  display: block;
+  border-radius: 4px;
+  border: 0;
+
+  padding: 6px 25px;
 }
+.filter-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-btn:hover,
 .filter-btn:focus {
   color: var(--white-text);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .project-list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+.project-list .item {
+  border: 1px solid #eeeeee;
+
+  width: 370px;
+
+  padding-bottom: 20px;
+
+  flex-basis: calc((100% - 60px) / 3);
+}
+
 .project-list .link {
   text-decoration: none;
   color: inherit;
@@ -252,9 +391,14 @@ button {
   letter-spacing: 0.06em;
 
   color: var(--main-text);
+  width: 322px;
+  margin-bottom: 4px;
 }
 .project-list .text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  width: 322px;
+  margin-left: auto;
+  margin-right: auto;
 }
