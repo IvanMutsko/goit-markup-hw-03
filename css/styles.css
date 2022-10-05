@@ -18,20 +18,22 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
 
 ul {
   margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
 p {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 body {
@@ -60,12 +62,12 @@ button {
 /* header */
 .header {
   background-color: var(--white-background);
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+.header .container {
   display: flex;
   align-content: center;
   align-items: center;
-  height: 80px;
-
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 .logo-header {
   font-family: 'Raleway';
@@ -96,6 +98,9 @@ button {
 
   text-decoration: none;
   color: var(--main-text);
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-list-item:nth-child(-n + 2) {
@@ -119,6 +124,9 @@ button {
 
   text-decoration: none;
   color: var(--secondary-text);
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header .link:hover,
@@ -188,10 +196,11 @@ button {
 /* hero */
 .hero {
   background-color: var(--dark-background);
-
-  padding-left: auto;
-  padding-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
+
 .hero .title {
   font-weight: 900;
   font-size: 44px;
@@ -204,6 +213,8 @@ button {
 
   width: 696px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-btn {
   font-weight: 700;
@@ -214,13 +225,10 @@ button {
   color: var(--white-text);
   background-color: var(--accent-color);
 
-  display: block;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border: 0;
-  margin-left: auto;
-  margin-right: auto;
+  border-color: transparent;
 }
 
 .hero button:hover,
@@ -310,8 +318,9 @@ button {
 .command-list .item:not(:last-child) {
   margin-right: 30px;
 }
-.command-list .photo {
-  margin-bottom: 30px;
+.command-list .wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .command-list .title {
   font-weight: 500;
@@ -328,7 +337,6 @@ button {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
 }
 
 /* ---------------portfolio page--------------- */
@@ -371,18 +379,16 @@ button {
   gap: 30px;
 }
 .project-list .item {
-  border: 1px solid #eeeeee;
-
-  width: 370px;
-
-  padding-bottom: 20px;
-
   flex-basis: calc((100% - 60px) / 3);
 }
 
 .project-list .link {
   text-decoration: none;
   color: inherit;
+}
+.project-list .wrap {
+    border: 1px solid #eeeeee;
+    padding: 20px 24px;
 }
 .project-list .title {
   font-weight: 700;
@@ -391,14 +397,10 @@ button {
   letter-spacing: 0.06em;
 
   color: var(--main-text);
-  width: 322px;
   margin-bottom: 4px;
 }
 .project-list .text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  width: 322px;
-  margin-left: auto;
-  margin-right: auto;
 }
