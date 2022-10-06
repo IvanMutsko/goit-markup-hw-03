@@ -211,7 +211,7 @@ button {
 
   color: var(--white-text);
 
-  width: 696px;
+  max-width: 696px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -387,8 +387,8 @@ button {
   color: inherit;
 }
 .project-list .wrap {
-    border: 1px solid #eeeeee;
-    padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
 .project-list .title {
   font-weight: 700;
